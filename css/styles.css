@@ -33,6 +33,18 @@ p,h1,h2,h3,h4,h5,h6{
     padding-right: 15px;
     margin: 0 auto;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 /*==========header===========*/
 
 .header{
@@ -176,18 +188,6 @@ button{
 .advantages{
     padding-top: 120px;
     padding-bottom: 120px;
-}
-.visually-hidden{
-    position: absolute;
-     width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
 }
 .advantages-list-ill{
     display: flex;
@@ -457,4 +457,165 @@ button{
 }
 .footer-icon{
     fill: #F4F4FD;
+}
+
+
+/*=============modal============*/
+
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+.modal{
+    width: 408px;
+    min-height: 584px;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+                0 1px 3px 0 rgba(0, 0, 0, 0.12),
+                0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 72px 24px 24px 24px;
+}
+.modal-close{
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    top: 24px;
+    right: 24px;
+    position: absolute;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #2E2F42;
+}
+.modal-close:hover{
+    background-color: #404bbf;
+}
+.modal-close:focus{
+    background-color: #404bbf;
+}
+.modal-text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 16px;
+}
+.modal-field{
+    margin-bottom: 8px;
+}
+.modal-input{
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+    padding-left: 38px;
+    outline: transparent;
+}
+.modal-input:focus{
+    border-color: #4d5ae5;
+}
+.modal-input:focus + .modal-input-icon{
+    fill: #4d5ae5;
+}
+.modal-input-text{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+.modal-input-cover{
+    position: relative;
+}
+.modal-input-icon{
+    fill: #2E2F42;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.modal-textarea{
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 360px;
+    height: 120px;
+    padding: 8px 16px;
+    background-color: transparent;
+    outline: transparent;
+    resize: none;
+}
+.modal-textarea:focus{
+    border-color: #4d5ae5;
+}
+.modal-textarea::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+.modal-check:checked + .modal-check-text .modal-check-element{
+    background-color: #404bbf;
+    fill: #f4f4fd;
+}
+.modal-check-text{
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    display: flex;
+    align-items: center;
+}
+.modal-check-element{
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+.modal-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    min-width: 169px;
+    height: 56px;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    background: #4d5ae5;
+
+}
+.modal-btn:hover {
+    background-color: #404bbf;
+}
+.modal-btn:focus {
+    background-color: #404bbf;
 }
