@@ -599,7 +599,7 @@ button {
     margin-bottom: 16px;
 }
 .modal-field{
-    margin-bottom: 8px;/*16px*/
+    margin-bottom: 8px;
 }
 .modal-field-textarea{
     margin-bottom: 16px;
@@ -666,15 +666,20 @@ button {
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
 }
+.modal-field-privacy{
+    margin-bottom: 24px;
+}
 .modal-check:checked + .modal-check-text .modal-check-element{
     background-color: #404bbf;
     fill: #f4f4fd;
+    border: none;
 }
 .modal-check-text{
     font-size: 12px;
     line-height: 1.16667;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    line-height: 1.17;
     display: flex;
     align-items: center;
 }
@@ -684,10 +689,14 @@ button {
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     margin-right: 12px;
-    display: flex;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     fill: transparent;
+}
+.modal-check-privacy{
+    color: #4d5ae5;;
 }
 .modal-btn {
     font-weight: 500;
